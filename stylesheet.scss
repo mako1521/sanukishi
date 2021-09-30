@@ -1,0 +1,175 @@
+@mixin ul {
+    list-style: none;
+    text-align: center;
+}
+
+@mixin flex {
+    display: flex;
+    align-items: center;
+}
+
+@mixin box (){
+    text-align: center;
+    width: 100%;
+    color: $white-color;
+}
+
+$base-color:#bf0000;
+$text-color:#ccc;
+$white-color:rgb(255, 255, 255);
+
+
+
+body {
+    max-width: 950px;
+    margin: 0 auto;
+    margin-top: 200px;
+}
+
+.flex {
+    display: flex;
+   
+}
+
+aside{
+    max-width: 220px;
+    margin-bottom: 27px;
+}
+
+.search{
+    height: 30px;
+    margin-bottom: 10px;
+
+    input[type='text'] {
+        padding: 5px 0; 
+    }
+
+    button{
+        color: white;
+        border-radius: 2px;
+        border: none;
+        cursor: pointer;
+        padding: 5px 6px;
+        background-color: $base-color;
+    }
+}
+
+.search__form{
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sidenavi__ul {
+    @include ul();
+    display: inline-block;
+    text-align: center;
+    padding-left: 0;
+    width: 220px;
+    margin: 0;
+}
+
+
+.sidenavi__text {
+    @include box();
+    height: 70px;
+    cursor: pointer;
+    padding: 25px;
+    margin: 5px 0;
+    border-radius: 2px;
+}
+
+
+.sidenavi_button--link {
+    background-color: $base-color;
+    text-decoration: none;
+    color: $white-color;
+    display: block;
+}
+
+.sidenavi_button--link:hover {
+    background-color: darken($base-color, 6%);
+}
+
+
+.category {
+    width: 220px;
+    margin: 0 auto;
+}
+
+.category__ul {
+    @include ul();
+    text-align: left;
+    background-color: white;
+    margin: 0;
+    padding-left: 0;
+}
+
+
+.category__li {
+    border-bottom: 1px solid $base-color;
+    padding-bottom: 1px;
+}
+
+.category__li--link {
+    text-decoration: none;
+    transition: 2;
+    display: block;
+}
+
+.category__li--link:hover{
+    background-color: #e7e7e7;
+}
+
+
+.category__elementl{
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.category__element:last-of-type{
+    margin-bottom: 20px;
+}
+
+.category__img {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    margin: 0 30px 0 10px;
+}
+
+
+.category__element__text{
+    color: rgb(29, 29, 29);
+    padding-left: 18px;
+    margin: 0;
+}
+
+
+
+
+.category__top{
+    @include box();
+    height: 50px;
+    border-radius: 2px 2px 0 0 ;
+    margin-bottom: 15px;
+    padding-top: 15px;
+    background-color: $base-color;
+}
+
+
+
+
+
+
+
+// .city img {
+//     width: 700px;
+// }
+
+// p{
+//     margin-block-start: 0;
+// }
+
+
